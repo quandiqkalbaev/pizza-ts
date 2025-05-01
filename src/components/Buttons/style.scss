@@ -1,0 +1,29 @@
+.ings__btns {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(184, 184, 184);
+  border-top: none;
+  gap: 20px;
+  padding: 20px;
+  &-btn {
+    background-color: rgb(7, 186, 28);
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: #fff;
+    cursor: pointer;
+  }
+  &-checkout{
+    background-color: #0861f9;
+  }
+  &-load{
+    background-color: #28303e;
+
+  }
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+}

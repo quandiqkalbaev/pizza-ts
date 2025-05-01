@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import IngridientsList from "./IngridientsList";
 import "./style.scss";
+import IngridientsContext from "../utils/ingridientsContext";
+import Buttons from "../Buttons/Buttons";
 
-function Ingridients({ state, dispatch }: { state: any; dispatch: any }) {
+function Ingridients() {
+  const { state, dispatch } = useContext(IngridientsContext);
   const total: number = state.reduce((a: number, b: any) => a + b.price * b.count, 0);
   return (
     <div className="ings">
@@ -12,7 +16,8 @@ function Ingridients({ state, dispatch }: { state: any; dispatch: any }) {
           Reset Pizza
         </button>
       </div>
-      <IngridientsList state={state} dispatch={dispatch} />
+      <IngridientsList />
+      <Buttons />
     </div>
   );
 }

@@ -1,4 +1,9 @@
-function IngridientsList({ state, dispatch }: { state: any; dispatch: any }) {
+import { useContext } from "react";
+import IngridientsContext from "../utils/ingridientsContext";
+
+function IngridientsList() {
+  const { state, dispatch } = useContext(IngridientsContext);
+
   return (
     <ul className="ings__list">
       {state.slice(0, state.length - 1).map((el: any) => (
@@ -8,17 +13,11 @@ function IngridientsList({ state, dispatch }: { state: any; dispatch: any }) {
             <p className="ings__price">{el.price}$</p>
           </div>
           <div className="ings__amount">
-            <button
-              className="ings__plus ings__amount-btn"
-              onClick={() => dispatch({ type: "decrement", id: el.id })}
-            >
+            <button className="ings__plus ings__amount-btn" onClick={() => dispatch({ type: "decrement", id: el.id })}>
               -
             </button>
             <p className="ings__count">{el.count}</p>
-            <button
-              className="ings__minus ings__amount-btn"
-              onClick={() => dispatch({ type: "increment", id: el.id })}
-            >
+            <button className="ings__minus ings__amount-btn" onClick={() => dispatch({ type: "increment", id: el.id })}>
               +
             </button>
           </div>
