@@ -67,4 +67,12 @@
     width: 50px;
     text-align: center;
   }
+  &__code{
+    text-align: center;
+    margin: 20px 0;
+    span{
+      cursor: pointer;
+      color: green;
+    }
+  }
 }

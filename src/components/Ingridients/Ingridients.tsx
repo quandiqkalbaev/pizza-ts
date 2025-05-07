@@ -18,6 +18,7 @@ function Ingridients() {
       </div>
       <IngridientsList />
       <Buttons />
+ 
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import "./style.scss";
-import exampleImg from "../../images/desk.jpg";
 import { useContext } from "react";
 import IngridientsContext from "../utils/ingridientsContext";
 function Main() {
@@ -8,16 +7,12 @@ function Main() {
   return (
     <div className="main">
       <h2 className="main__title">Your pizza</h2>
-
       <ul className="main__list">
         {ings.map((el) => (
-          <li className="main__item">
+          <li className="main__item" key={el.id}>
             <img src={el.img} alt={el.name} />
           </li>
         ))}
-        {/* <li className="main__item">
-          <img src={exampleImg} alt="pizza" />
-        </li> */}
       </ul>
     </div>
   );

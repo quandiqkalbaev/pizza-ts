@@ -1,0 +1,102 @@
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__wrapper {
+    position: relative;
+    width: 25%;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title,
+  &__total {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+  }
+  &__ings {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+  }
+  ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  li {
+    font-size: 20px;
+    padding: 0 40px;
+  }
+  &__total {
+    margin-top: 20px;
+  }
+  &__text {
+    font-size: 18px;
+    text-align: center;
+  }
+  &__btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    &-btn {
+      background-color: rgb(7, 186, 28);
+      border: none;
+      font-size: 20px;
+      font-weight: 500;
+      border-radius: 10px;
+      padding: 10px 25px;
+      color: #fff;
+      cursor: pointer;
+      &:first-child {
+        background-color: #28303e;
+      }
+      &:last-child {
+        background-color: #0861f9;
+      }
+    }
+  }
+
+  //Load Popup styles
+  &__block {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #0861f9;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+  }
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

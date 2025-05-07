@@ -16,6 +16,8 @@ export default function reducer(state: any, action: any) {
       );
     case "reset":
       return state.map((elem: any) => (elem.id < state.length - 1 ? { ...elem, count: 0, isAdded: false } : elem));
+    case "load":
+      return action.payload;
     default:
       return state;
   }
